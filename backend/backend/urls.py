@@ -16,8 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from pydblite.pydblite import Base
+import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
 ]
+
+
+def one_time_startup():
+    db = Base('dummy', save_to_file=True)
+    # create new base with field names
+    db.create('name', 'age', 'size')
+    db.insert(name='homer', age=23, size=1.84)
+    db.insert(name='marge', age=36, size=1.94)
+    db.commit()
+
+
+if not os.path.isfile('./dummy'):
+    one_time_startup()
