@@ -1,16 +1,24 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from pydblite.pydblite import Base
+from django.template.loader import render_to_string
 
 
 # Create your views here.
-def say_hello(request):
-    return HttpResponse("Hello World")
+def status(request):
+    return HttpResponse("Back-end is UP!!!")
 
 
-def display_db(request):
-    db = Base('dummy', save_to_file=False)
+def show_books(request):
+    db = Base('books', save_to_file=False)
     db.open()
-    records = db(name="homer")
-    print(records[0]['name'])
-    return render(request, 'db.html', {'name': records[0]['name'], 'age': records[0]['age'], 'size': records[0]['size']})
+
+    records = db.records
+    data = []
+
+    for key in records:
+        data.append(records[key]['name'])
+
+    context = {'names': data}
+
+    return render(request, 'books.html', context)

@@ -26,13 +26,17 @@ urlpatterns = [
 
 
 def one_time_startup():
-    db = Base('dummy', save_to_file=True)
+    db = Base('books', save_to_file=True)
     # create new base with field names
-    db.create('name', 'age', 'size')
-    db.insert(name='homer', age=23, size=1.84)
-    db.insert(name='marge', age=36, size=1.94)
+    db.create('id', 'name', 'author', 'start_read', 'end_read', 'rating', 'comment')
+    db.insert(id=1, name='The Master and Margarita', author='Mikhail Bulgakov',
+              start_read='20/12/2020', end_read='10/01/2021', rating=3)
+    db.insert(id=2, name='In Dubious Battle', author='John Steinbeck',
+              start_read='10/01/2021', end_read='02/02/2021', rating=4)
+    db.insert(id=3, name='Saga: Compendium One', author='Brian K. Vaughan, Fiona Staples',
+              start_read='15/12/2020', end_read='03/02/2021', rating=5)
     db.commit()
 
 
-if not os.path.isfile('./dummy'):
+if not os.path.isfile('./books'):
     one_time_startup()
