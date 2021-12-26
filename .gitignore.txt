@@ -64,4 +64,4 @@ xcuserdata/
 
 # documents folder #
 ###########
-booksite_documents
+booksite_documents/Mock-ups/
