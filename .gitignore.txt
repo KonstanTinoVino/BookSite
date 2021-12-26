@@ -61,3 +61,7 @@ CVS
 *.mode2v3
 *.perspectivev3
 xcuserdata/
+
+# documents folder #
+###########
+booksite_documents/
