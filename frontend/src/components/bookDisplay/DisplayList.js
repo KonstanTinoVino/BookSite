@@ -3,10 +3,6 @@ import Book from "./Book";
 
 class DisplayList extends Component {
 
-    constructor() {
-        super();
-    }
-
 
     render() {
 
