@@ -7,11 +7,12 @@ import About from './pages/about';
 import Services from './pages/services';
 import Contact from './pages/contact';
 import SignUp from './pages/signup';
+import ButtonDisplayBooks from "./components/bookDisplay/ButtonDisplayBooks";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />
@@ -19,7 +20,9 @@ function App() {
         <Route path='/contact-us' component={Contact} />
         <Route path='/sign-up' component={SignUp} />
       </Routes>
+        <ButtonDisplayBooks/>
     </Router>
+
   );
 }
 
