@@ -14,7 +14,7 @@ def get_all_books(request):
     db.open()
     records = db.records
     json = utils.create_json(records)
-    return HttpResponse(json, content_type='application/json')
+    return HttpResponse(json, content_type='application/json', headers={"Access-Control-Allow-Origin": "*"})
 
 
 def show_books(request):
