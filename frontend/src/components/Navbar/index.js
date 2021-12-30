@@ -9,6 +9,7 @@ import {
 } from './NavbarElements';
 import './styles.css'
 
+// from -> https://www.youtube.com/watch?v=VzWBLj_CfpE
 const Navbar = () => {
   return (
       <>
