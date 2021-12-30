@@ -30,25 +30,30 @@ class ButtonDisplayBooks extends Component {
         );
     }
 
-    renderBooks() {
-        if (this.state.display) {
-            axios.get("http://127.0.0.1:8000/playground/get_books/")
+    getAllBooks(){
+        axios.get("http://127.0.0.1:8000/playground/get_books/")
                 .then(response => {
-                    this.setState(prevState =>({
+                    this.setState(() =>({
                         books: response.data.books
                     }))
                 })
                 .catch()
-            this.setState(prevState => ({
-                buttonText: 'Display Books',
-                display: false
-            }), () => console.log('HideBooks'))
+    }
+
+    updateState(name, state, message){
+        this.setState(() => ({
+                buttonText: name,
+                display: state
+            }), () => console.log(message))
+    }
+
+    renderBooks() {
+        if (this.state.display) {
+            this.getAllBooks()
+            this.updateState('Display Books', false, 'GetBooks')
         }
         else
-            this.setState(prevState =>({
-                buttonText: 'Hide Books',
-                display: true
-            }),() => console.log('GetBooks'))
+            this.updateState('Hide Books', true, 'HideBooks')
     }
 }
 
