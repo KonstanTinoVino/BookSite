@@ -8,7 +8,6 @@ const Books = () => {
                 textAlign: "center",
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '90vh'
             }}
         >
             <h1>Books</h1>

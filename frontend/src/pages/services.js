@@ -7,7 +7,6 @@ const Services = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '90vh'
       }}
     >
       <h1>Services</h1>
