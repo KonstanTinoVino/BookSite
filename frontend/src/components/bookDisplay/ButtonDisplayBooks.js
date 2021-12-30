@@ -1,15 +1,25 @@
 import React, {Component} from 'react';
 import DisplayList from "./DisplayList";
 import './Styles.css'
+import axios from "axios";
 
 class ButtonDisplayBooks extends Component {
     constructor() {
         super();
         this.state = {
             display: false,
-            buttonText: 'Display Books'
+            buttonText: 'Display Books',
+            posts: []
         }
         this.renderBooks = this.renderBooks.bind(this)
+    }
+
+    componentDidMount() {
+        axios.get("http://127.0.0.1:8000/playground/get_books/")
+            .then(response => {
+                console.log(response)
+            })
+            .catch()
     }
 
     render() {

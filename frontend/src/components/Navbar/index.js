@@ -19,16 +19,16 @@ const Navbar = () => {
           </NavLink>
           <Bars />
           <NavMenu>
-            <NavLink to='/books' activeStyle>
+            <NavLink to='/books' activestyle='true'>
               Books
             </NavLink>
-            <NavLink to='/services' activeStyle>
+            <NavLink to='/services' activestyle='true'>
               Services
             </NavLink>
-            <NavLink to='/contact-us' activeStyle>
+            <NavLink to='/contact-us' activestyle='true'>
               Contact
             </NavLink>
-            <NavLink to='/sign-up' activeStyle>
+            <NavLink to='/sign-up' activestyle='true'>
               Sign Up
             </NavLink>
             {/* Second Nav */}
