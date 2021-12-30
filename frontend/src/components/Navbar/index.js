@@ -7,36 +7,37 @@ import {
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+import './styles.css'
 
 const Navbar = () => {
   return (
-    <>
-      <Nav>
-        <NavLink to='/'>
-          <img src={require("./images/logo.svg").default} alt='logo' />
-        </NavLink>
-        <Bars />
-        <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
+      <>
+        <Nav>
+          <NavLink to='/'>
+            <img className='image' src={require("./images/book.png")} alt='logo' />
           </NavLink>
-          <NavLink to='/services' activeStyle>
-            Services
-          </NavLink>
-          <NavLink to='/contact-us' activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
-      </Nav>
-    </>
+          <Bars />
+          <NavMenu>
+            <NavLink to='/books' activeStyle>
+              Books
+            </NavLink>
+            <NavLink to='/services' activeStyle>
+              Services
+            </NavLink>
+            <NavLink to='/contact-us' activeStyle>
+              Contact
+            </NavLink>
+            <NavLink to='/sign-up' activeStyle>
+              Sign Up
+            </NavLink>
+            {/* Second Nav */}
+            {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          </NavBtn>
+        </Nav>
+      </>
   );
 };
 

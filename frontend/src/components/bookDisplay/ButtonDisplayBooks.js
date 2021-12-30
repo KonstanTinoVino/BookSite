@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import DisplayList from "./DisplayList";
+import './Styles.css'
 
 class ButtonDisplayBooks extends Component {
     constructor() {
@@ -13,8 +14,8 @@ class ButtonDisplayBooks extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={this.renderBooks}>{this.state.buttonText}</button>
+            <div className='bookList'>
+                <button className='showButton' onClick={this.renderBooks}>{this.state.buttonText}</button>
                 {this.state.display ?
                     <DisplayList />  :
                     null
