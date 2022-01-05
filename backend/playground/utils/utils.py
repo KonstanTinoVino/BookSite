@@ -10,7 +10,7 @@ def create_json(records):
             json_element[value] = records[key][value]
         json_list.append(json_element)
 
-    final_json = {"books": json_list}
+    final_json = {"pages": json_list}
     json_string = json.dumps(final_json, indent=4)
     print(json_string)
     return json_string
