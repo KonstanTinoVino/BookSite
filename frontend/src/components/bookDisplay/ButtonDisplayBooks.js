@@ -31,10 +31,10 @@ class ButtonDisplayBooks extends Component {
     }
 
     getAllBooks(){
-        axios.get("http://127.0.0.1:8000/playground/get_books/")
+        axios.get("http://127.0.0.1:8000/playground/get_all_data/")
                 .then(response => {
                     this.setState(() =>({
-                        books: response.data.books
+                        books: response.data.data
                     }))
                 })
                 .catch()

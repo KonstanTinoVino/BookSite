@@ -18,6 +18,7 @@ def create_json():
         books = serialize_books(author.book_set)
         author_json = {'id': author.id, 'name': author.first_name + ' ' + author.last_names, 'books': books}
         authors_list_json.append(author_json)
+    final_json = {'data': authors_list_json}
 
-    json_string = json.dumps(authors_list_json, indent=3)
+    json_string = json.dumps(final_json, indent=5)
     return json_string
