@@ -3,8 +3,7 @@ import BookDisplay from "../components/bookDisplay/BookDisplay";
 
 const Books = () => {
     return (
-        <div
-        >
+        <div className="bookDiv">
             <h1 style={{textAlign: "center",}}>Books</h1>
             <BookDisplay/>
         </div>
