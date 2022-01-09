@@ -20,28 +20,10 @@
 main {
   display: grid;
   place-content: center;
-
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-400);
 }
 
 body{
     background-color: hsl(var(--clr-neutral-200));
-}
-
-
-
-.showButton{
-  border-radius: 4px;
-  background: #256ce1;
-  padding: 10px 22px;
-  color: #fff;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
 }
 
 .bookList{
@@ -65,12 +47,6 @@ body{
 }
 
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -79,23 +55,8 @@ html:focus-within {
 .bg-primary-400 {
   background: hsl(var(--clr-primary-400));
 }
-.bg-secondary-400 {
-  background: hsl(var(--clr-secondary-400));
-}
-.bg-secondary-500 {
-  background: hsl(var(--clr-secondary-500));
-}
-
-.bg-neutral-100 {
-  background: hsl(var(--clr-neutral-100));
-}
 
 .text-neutral-100 {
   color: hsl(var(--clr-neutral-100));
 }
-.text-secondary-400 {
-  color: hsl(var(--clr-secondary-400));
-}
-.border-primary-400 {
-  border: 2px solid #a775f1;
-}
+
