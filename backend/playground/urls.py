@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
     path('status/', views.status),
     path('populate_db/', views.populate_db),
-    path('get_all_data/', views.get_author_data)
+    path('get_all_data/', views.get_author_data),
+    path('get_book_cover/<int:book_id>/', views.get_book_image)
 ]

@@ -8,7 +8,7 @@ class Book extends Component {
         super();
     }
 
-    randomColor(){
+    getImage(){
 
     }
 
@@ -17,6 +17,7 @@ class Book extends Component {
         let titles = this.props.book.books
         let color = randomColor()
         const bookList = titles.map(book => (
+
             <div>
                 <h2 className="title" key={book.id}>{book.title}</h2>
                 <p className="author" key={this.props.book.id}>{this.props.book.name}</p>

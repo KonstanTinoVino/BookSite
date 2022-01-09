@@ -2,10 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# Create your models here.
 class Author(models.Model):
     first_name = models.TextField()
     last_names = models.TextField()
+    biography = models.TextField(blank=True, null=True)
     added_by = models.ForeignKey(User, on_delete=models.DO_NOTHING)
 
     def __str__(self):
@@ -17,8 +17,10 @@ class Book(models.Model):
     added_by = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     title = models.TextField()
     pages = models.IntegerField()
+    description = models.TextField(blank=True, null=True)
     started_reading = models.DateTimeField(blank=True, null=True)
     finished_reading = models.DateTimeField(blank=True, null=True)
+    cover_photo = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.title
