@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
 import './Styles.css'
+import randomColor from "randomcolor";
 
 class Book extends Component {
+
+    constructor() {
+        super();
+    }
+
+    randomColor(){
+
+    }
 
     render(props) {
 
         let titles = this.props.book.books
-        console.log(titles)
+        let color = randomColor()
         const bookList = titles.map(book => (
             <div>
                 <h2 className="title" key={book.id}>{book.title}</h2>
@@ -14,7 +23,7 @@ class Book extends Component {
             </div>
         ))
         return (
-            <article className="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
+            <article style={{background: color,}} className="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
                 {bookList}
            </article>
         );
