@@ -4,16 +4,13 @@ import Book from "./Book";
 class DisplayList extends Component {
 
     render(props) {
-        console.log(this.props.books)
         let books = this.props.books
 
         const bookList = books.map(book =><Book key={book.id} book={book}/>)
 
         return (
-            <div>
-                <ul>
+            <div className="testimonial-grid">
                 {bookList}
-                </ul>
             </div>
         );
     }

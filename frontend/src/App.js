@@ -7,7 +7,7 @@ import Books from './pages/books';
 import Services from './pages/services';
 import Contact from './pages/contact';
 import SignUp from './pages/signup';
-import ButtonDisplayBooks from "./components/bookDisplay/ButtonDisplayBooks";
+import BookDisplay from "./components/bookDisplay/BookDisplay";
 import Footer from "./components/Footer/Footer";
 
 function App() {
