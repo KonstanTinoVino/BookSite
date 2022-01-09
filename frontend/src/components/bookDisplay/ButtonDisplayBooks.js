@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import DisplayList from "./DisplayList";
 import './Styles.css'
 import axios from "axios";
@@ -15,20 +15,17 @@ class ButtonDisplayBooks extends Component {
     }
 
     componentDidMount() {
-
+        this.getAllBooks()
     }
 
     render() {
         return (
             <div className='bookList'>
-                <button className='showButton' onClick={this.renderBooks}>{this.state.buttonText}</button>
-                {this.state.display ?
-                    <DisplayList books={this.state.books} />  :
-                    null
-                }
+                    <DisplayList books={this.state.books} /> 
             </div>
         );
     }
+
 
     getAllBooks(){
         axios.get("http://127.0.0.1:8000/playground/get_all_data/")
