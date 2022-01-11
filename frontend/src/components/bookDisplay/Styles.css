@@ -25,8 +25,12 @@ body{
 /* components */
 .testimonial-grid {
   padding-block: 2rem;
-  width: min(95%, 70rem);
+  width: min(40%, 50rem);
   margin-inline: auto;
+}
+.Book img{
+  width: 50%;
+  height: 50%;
 }
 
 .testimonial {
@@ -43,9 +47,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-.bg-primary-400 {
-  background: hsl(var(--clr-primary-400));
-}
 
 .text-neutral-100 {
   color: hsl(var(--clr-neutral-100));
