@@ -16,12 +16,17 @@ class Book extends Component {
         let color = randomColor()
         const bookList = titles.map(book => (
             <div className="Book">
-                <div>
-                    <img src={"http://127.0.0.1:8000/playground/get_book_cover/" + book.id}/>
+                <div className="Data">
+                    <div className="Cover">
+                        <img src={"http://127.0.0.1:8000/playground/get_book_cover/" + book.id}/>
+                    </div>
+                    <div className="Info">
+                        <h2 className="title" key={book.id}>{book.title}</h2>
+                        <p className="author" key={this.props.book.id}>{this.props.book.name}</p>
+                    </div>
                 </div>
-                <div>
-                    <h2 className="title" key={book.id}>{book.title}</h2>
-                    <p className="author" key={this.props.book.id}>{this.props.book.name}</p>
+                <div className="summary">
+                    <p  key={this.props.book.id}>{book.summary}</p>
                 </div>
             </div>
         ))

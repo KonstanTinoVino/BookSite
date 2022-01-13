@@ -8,17 +8,22 @@
   --fs-500: 1.25rem;
 }
 
-main {
-  display: grid;
-  place-content: center;
+.Book {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.Data {
+  align-content: center;
+  text-align: center;
+
+}
+
+.summary{
+  padding-top: 10%;
 }
 
 body{
     background-color: hsl(var(--clr-neutral-200));
-}
-
-.bookList{
-    text-align: center;
 }
 
 
@@ -28,14 +33,15 @@ body{
   width: min(40%, 50rem);
   margin-inline: auto;
 }
-.Book img{
-  width: 50%;
-  height: 50%;
+.Cover img{
+  width: 30%;
+  height: 30%;
 }
+
 
 .testimonial {
   font-size: var(--fs-400);
-  padding: 3rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);

@@ -8,6 +8,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  
 
   /* Third Nav */
   /* justify-content: flex-start; */
@@ -21,6 +22,7 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  
 
   &.active {
     color: #15cdfc;
@@ -30,6 +32,7 @@ export const NavLink = styled(Link)`
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
+  
 
   @media screen and (max-width: 768px) {
     display: block;

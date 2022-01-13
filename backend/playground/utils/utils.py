@@ -5,7 +5,7 @@ from playground.models import Author
 def serialize_books(book_set):
     book_list_json = []
     for book in book_set.all():
-        json_book = {'id': book.id, 'title': book.title, 'pages': book.pages}
+        json_book = {'id': book.id, 'title': book.title, 'pages': book.pages, 'summary': book.summary}
         book_list_json.append(json_book)
 
     return book_list_json

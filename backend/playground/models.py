@@ -21,6 +21,7 @@ class Book(models.Model):
     started_reading = models.DateTimeField(blank=True, null=True)
     finished_reading = models.DateTimeField(blank=True, null=True)
     cover_photo = models.ImageField(null=True, blank=True)
+    summary = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.title
