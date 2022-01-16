@@ -36,7 +36,7 @@ class Story extends Component{
     render(props) {
         return (
             <div className="testimonial-grid">
-                <h2>{'Data' + this.state.description}</h2>
+                <p>{this.state.description}</p>
             </div>
         );
     }

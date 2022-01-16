@@ -12,13 +12,13 @@ def status(request):
 
 def get_author_data(request):
     data = utils.create_json()
-    return HttpResponse(data, content_type='application/json', headers={"Access-Control-Allow-Origin": "*"})
+    return HttpResponse(data, content_type='application/json')
 
 
 def get_book_description(request, book_id):
     if Book.objects.filter(id=book_id).exists():
         book = Book.objects.get(id=book_id)
-        return HttpResponse(book.description, content_type='text/plain',headers={"Access-Control-Allow-Origin": "*"})
+        return HttpResponse(book.description, content_type='text/plain')
     else:
         return HttpResponse('No Such Book Found', status=404)
 
@@ -26,7 +26,7 @@ def get_book_description(request, book_id):
 def get_book_image(request, book_id):
     if Book.objects.filter(id=book_id).exists():
         book = Book.objects.get(id=book_id)
-        return HttpResponse(book.cover_photo, content_type='image/jpg', headers={"Access-Control-Allow-Origin": "*"})
+        return HttpResponse(book.cover_photo, content_type='image/jpg')
     else:
         return HttpResponse('No Such Image Found', status=404)
 
