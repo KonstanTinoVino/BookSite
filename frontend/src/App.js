@@ -9,6 +9,7 @@ import Contact from './pages/contact';
 import SignUp from './pages/signup';
 import BookDisplay from "./components/bookDisplay/BookDisplay";
 import Footer from "./components/Footer/Footer";
+import Story from "./pages/story";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/services' element={<Services/>} />
                 <Route path='/contact-us' element={<Contact/>} />
                 <Route path='/sign-up' element={<SignUp/>} />
+                <Route path='/story' element={<Story/>} />
             </Routes>
             <Footer/>
         </Router>

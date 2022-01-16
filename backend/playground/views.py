@@ -15,6 +15,14 @@ def get_author_data(request):
     return HttpResponse(data, content_type='application/json', headers={"Access-Control-Allow-Origin": "*"})
 
 
+def get_book_description(request, book_id):
+    if Book.objects.filter(id=book_id).exists():
+        book = Book.objects.get(id=book_id)
+        return HttpResponse(book.description, content_type='text/plain',headers={"Access-Control-Allow-Origin": "*"})
+    else:
+        return HttpResponse('No Such Book Found', status=404)
+
+
 def get_book_image(request, book_id):
     if Book.objects.filter(id=book_id).exists():
         book = Book.objects.get(id=book_id)

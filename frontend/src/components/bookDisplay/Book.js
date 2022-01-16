@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Styles.css'
 import randomColor from "randomcolor";
-import axios from "axios";
+import {Link} from "react-router-dom";
 
 class Book extends Component {
 
@@ -16,10 +16,13 @@ class Book extends Component {
         let color = randomColor()
         const bookList = titles.map(book => (
             <div className="Book">
+
                 <div className="Data">
-                    <div className="Cover">
-                        <img src={"http://127.0.0.1:8000/playground/get_book_cover/" + book.id}/>
-                    </div>
+                    <Link to={"/story?id=" + book.id}>
+                        <div className="Cover">
+                            <img src={"http://127.0.0.1:8000/playground/get_book_cover/" + book.id}/>
+                        </div>
+                    </Link>
                     <div className="Info">
                         <h2 className="title" key={book.id}>{book.title}</h2>
                         <p className="author" key={this.props.book.id}>{this.props.book.name}</p>
@@ -28,6 +31,7 @@ class Book extends Component {
                 <div className="summary">
                     <p  key={this.props.book.id}>{book.summary}</p>
                 </div>
+
             </div>
         ))
         return (

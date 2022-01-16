@@ -7,8 +7,6 @@ class BookDisplay extends Component {
     constructor() {
         super();
         this.state = {
-            display: false,
-            buttonText: 'Display Books',
             books: []
         }
     }
